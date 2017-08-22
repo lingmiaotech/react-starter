@@ -1,0 +1,18 @@
+
+# misc
+.DS_Store
+
+# editors
+.idea
+.swp
+
+# vendors
+node_modules/
+
+# log
+*.log
+
+# deploy
+staging
+production
+dist
