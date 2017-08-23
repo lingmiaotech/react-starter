@@ -8,8 +8,4 @@ function Services() {
   );
 }
 
-function mapStateToProps() {
-  return {};
-}
-
-export default connect(mapStateToProps)(Services);
+export default Services;

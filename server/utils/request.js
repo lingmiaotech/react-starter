@@ -4,18 +4,18 @@ var _ = require('lodash');
 
 function request(options) {
 
-  var o = _.extend({url: '', method: 'GET', headers: {}, params: {}, json: {}}, (options || {}));
+  var o = _.extend({url: '', method: 'GET', headers: {}, params: {}, body: {}}, (options || {}));
   var u = o.url;
   var m = o.method;
   var h = o.headers;
   var p = o.params;
-  var j = o.json;
+  var b = o.body;
 
   var qs = _.map(p, (value, key) => encodeURIComponent(key) + '=' + encodeURIComponent(value)).join('&');
   if (qs) u = u + '?' + qs;
 
   var opts = { method: m, headers: h};
-  if (m == 'POST') opts['body'] = JSON.stringify(j);
+  if (m == 'POST') opts['body'] = JSON.stringify(b);
 
   return fetch(u, opts)
     .then(response => response.text())

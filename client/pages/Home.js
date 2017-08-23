@@ -4,14 +4,9 @@ import { connect } from 'react-redux';
 function Home() {
   return (
     <div>
-      Route Component: Home2
+      Route Component: Home3
     </div>
   );
 }
 
-function mapStateToProps() {
-  return {};
-}
-
-//export default connect(mapStateToProps)(Home);
 export default Home;
